@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+
+float max_reel(float a, float b) {
+    if (a > b) {
+        return a;
+    } else {
+        return b;
+    }
+}
+
+int main() {
+    float a,b;
+    cout << "Entrez une 1ere valeur" << endl;
+    cin >> a;
+    cout << "Entrez une 2e valeur" << endl;
+    cin >> b;
+    float r = max_reel(a,b);
+    
+    
+    cout << "Le maximum est " << r << endl;
+}
+
+
+
