@@ -1,0 +1,26 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+int somme_puissances(int a) {
+    int res = 0;
+    for (int i = 0; i<a; i++) {
+        res = res + pow(2, i);
+    }   
+    return res;
+}
+
+int main() {
+    int n;
+    cout << "Entrez une 1ere valeur" << endl;
+    cin >> n;
+    
+    int somme = somme_puissances(n);
+    
+    
+    cout << "La somme des " << n << " premières puissances de 2  est " << somme << endl;
+}
+
+
+
