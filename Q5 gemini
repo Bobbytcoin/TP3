@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+
+void ligne_pleine(int n, char c) {
+    for (int i = 0; i < n; i++) {
+        cout << c; 
+    }
+    cout << endl; 
+}
+
+void ligne_creuse(int n, char c) {
+    if (n > 0) {
+        cout << c;
+    }
+    for (int i = 0; i < n - 2; i++) {
+        cout << " "; 
+    }
+    if (n > 1) {
+        cout << c; 
+    }
+    cout << endl;
+}
+
+void affiche_carre(int n, char c) {
+    ligne_pleine(n, c);
+    for (int i = 0; i < n - 2; i++) {
+        ligne_creuse(n, c);
+    }
+    if (n > 1) {
+        ligne_pleine(n, c);
+    }
+}
+    
+int main(void) {
+    char caractere;
+    int taille;
+    
+    cout << "Entrez une valeur pour la taille" << endl;
+    cin >> taille;
+    cout << "Entrez le caractere a afficher" << endl;
+    cin >> caractere;
+                         
+    affiche_carre(taille, caractere);
+    
+    return 0;     
+}
