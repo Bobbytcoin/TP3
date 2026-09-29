@@ -1,0 +1,26 @@
+#include <iostream>
+#include <time.h>     
+#include <stdlib.h>  
+using namespace std;
+
+int tirer_ale(int a, int b) {
+    int val = rand() % (b - a + 1) + a;
+    return val;
+}
+
+int main(void) {
+    int min, max;
+    cout << "Entrez une valeur" << endl;
+    cin >> min;
+    cout << "Entrez une nouvelle valeur" << endl;
+    cin >> max;
+
+    srand(time(NULL));     
+
+    int valea = tirer_ale(min, max);                          
+  
+ 
+    cout << "la valeur aleatoire est : " << valea << endl;
+    
+    return 0;     
+}
