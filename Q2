@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+
+double factorielle(int a) {
+    int res = 1;
+    for (int i = 1; i<=a; i++) {
+        res = res*i;
+    }   
+    return res;
+}
+
+int main() {
+    int n;
+    cout << "Entrez une 1ere valeur" << endl;
+    cin >> n;
+    
+    int somme = factorielle(n);
+    
+    
+    cout << "La factorielle de " << n << " est " << somme << endl;
+}
+
+
+
